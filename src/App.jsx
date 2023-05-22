@@ -3,6 +3,7 @@ import Demo from "./components/Demo";
 
 import "./App.css";
 
+
 const App = () => {
   return (
     <main>
@@ -13,6 +14,10 @@ const App = () => {
       <div className='app'>
         <Hero />
         <Demo />
+        
+      </div>
+      <div className='app mt-24' style={{fontSize:12,fontWeight:"bold"}}>
+        © 2023 Niyas Kandengil
       </div>
     </main>
   );
