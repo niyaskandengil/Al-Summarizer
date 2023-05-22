@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import { copy, linkIcon, loader, tick } from "../assets";
+import { useLazyGetSummaryQuery } from "../services/article";
+
 
 const Demo = () => {
-    const [artilce, setArticle] = useState({
+    const [article, setArticle] = useState({
         url: '',
         summary: '',
     });
+
+    const [getSummary, {error, isFetching}] = useLazyGetSummaryQuery();
+
     const handleSubmit = async (e) => {
-        alert('submitted');
+        const {data} = await getSummary(articleUrl: article.url);
     }
   return (
     <section className="mt-16 w-full max-w-xl">
@@ -21,8 +26,8 @@ const Demo = () => {
             <input
             type="url"
             placeholder="Enter a URL"
-            value={artilce.url}
-            onChange={(e) => {setArticle({...artilce, url: e.target.value})}}
+            value={article.url}
+            onChange={(e) => {setArticle({...article, url: e.target.value})}}
             required
             className="url_input peer "
             />
