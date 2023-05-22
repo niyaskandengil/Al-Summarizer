@@ -6,7 +6,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <main>
+    <main style={{position:'relative'}}>
       <div className='main'>
         <div className='gradient' />
       </div>
@@ -16,7 +16,7 @@ const App = () => {
         <Demo />
         
       </div>
-      <div className='app mt-24' style={{fontSize:12,fontWeight:"bold"}}>
+      <div className='app' style={{fontSize:12,fontWeight:"bold",bottom:'-10px'}}>
         © 2023 Niyas Kandengil
       </div>
     </main>
