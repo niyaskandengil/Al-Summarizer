@@ -16,7 +16,7 @@ const App = () => {
         <Demo />
         
       </div>
-      <div className='app' style={{fontSize:12,fontWeight:"bold",bottom:'-10px'}}>
+      <div className='app' style={{fontSize:12,fontWeight:"bold",bottom:'10px'}}>
         © 2023 Niyas Kandengil
       </div>
     </main>
